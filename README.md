@@ -1,6 +1,6 @@
 # Projekty DELTA 2.A, 2 skupina
 
-Zde najdete všechny drojové kody z hodin.
+Zde najdete všechny zdrojové kody z hodin.
 
 ### Requirements
 
