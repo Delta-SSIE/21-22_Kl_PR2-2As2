@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-Hello-world", "01-Hello-world\01-Hello-world.csproj", "{E770CA71-1033-4DA3-85B5-886CA434C0FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-Uvod_00-Opakovani-syntaxe", "01-Hello-world\01-Uvod_00-Opakovani-syntaxe.csproj", "{E770CA71-1033-4DA3-85B5-886CA434C0FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Uvod", "01-Uvod", "{CC7157B4-1929-4648-80A1-7F16EF70BAFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-Uvod_01-Prohozeni-promennych", "01-Uvod_01-Prohozeni-promennych\01-Uvod_01-Prohozeni-promennych.csproj", "{B39E522B-C3EF-4B92-A6C4-9CA94DE1BBA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,17 @@ Global
 		{E770CA71-1033-4DA3-85B5-886CA434C0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E770CA71-1033-4DA3-85B5-886CA434C0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E770CA71-1033-4DA3-85B5-886CA434C0FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B39E522B-C3EF-4B92-A6C4-9CA94DE1BBA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B39E522B-C3EF-4B92-A6C4-9CA94DE1BBA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B39E522B-C3EF-4B92-A6C4-9CA94DE1BBA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B39E522B-C3EF-4B92-A6C4-9CA94DE1BBA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E770CA71-1033-4DA3-85B5-886CA434C0FD} = {CC7157B4-1929-4648-80A1-7F16EF70BAFC}
+		{B39E522B-C3EF-4B92-A6C4-9CA94DE1BBA7} = {CC7157B4-1929-4648-80A1-7F16EF70BAFC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB031FC3-9FE8-4FD6-B836-C5C1B6CC76F7}
