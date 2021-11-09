@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_11_OOP_060_Pes_II</RootNamespace>
+    <AssemblyName>adě kolize</AssemblyName>
+  </PropertyGroup>
+
+</Project>
