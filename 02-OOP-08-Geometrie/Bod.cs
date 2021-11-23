@@ -4,38 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _02_OOP_07_Bod
+namespace _02_OOP_08_Geometrie
 {
     class Bod
     {
-        //private double _x, _y;
-
-        //public double X {
-        //    get
-        //    {
-        //        return _x;
-        //    }
-
-        //    private set
-        //    {
-        //        _x = value;
-        //    }
-        //}
-
-        //public double Y
-        //{
-        //    get
-        //    {
-        //        return _y;
-        //    }
-
-        //    private set
-        //    {
-        //        _y = value;
-        //    }
-        //}
-        public double X {get; private set;}
-        public double Y { get; private set;}
+        public double X { get; private set; }
+        public double Y { get; private set; }
 
         public bool ShodnyS(Bod jinyBod)
         {
@@ -59,7 +33,5 @@ namespace _02_OOP_07_Bod
         {
             return $"bod [{X}, {Y}]";
         }
-
-
     }
 }

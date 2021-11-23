@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace _02_OOP_07_Bod
+namespace _02_OOP_08_Geometrie
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Bod A = new Bod(4, -12);
-            Console.WriteLine(A);
+            Console.WriteLine("Hello World!");
         }
     }
 }
