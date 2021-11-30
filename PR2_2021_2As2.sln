@@ -25,23 +25,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-OOP-05-Kruznice-III", "0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reseni-replit", "Reseni-replit", "{672241D6-9FB7-415E-B580-93DDC9E971DE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-OOP-010-Obdelnik-I", "02a-OOP_reseni-010-Obdelnik-I\11-OOP-010-Obdelnik-I.csproj", "{966D27D5-1C92-47E4-BD8A-79F8601DBE7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-010-Obdelnik-I", "02a-OOP_reseni-010-Obdelnik-I\02a-OOP_reseni-010-Obdelnik-I.csproj", "{966D27D5-1C92-47E4-BD8A-79F8601DBE7C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-OOP-020-Pes", "02a-OOP_reseni-020-Pes\11-OOP-020-Pes.csproj", "{F5E6F822-05B6-4C12-94A5-3529CF20937B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-020-Pes", "02a-OOP_reseni-020-Pes\02a-OOP_reseni-020-Pes.csproj", "{F5E6F822-05B6-4C12-94A5-3529CF20937B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-OOP-030-CD-Disky", "02a-OOP_reseni-030-CD-Disky\11-OOP-030-CD-Disky.csproj", "{6558BD84-DDB9-4BE4-9608-B73AD5000214}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-030-CD-Disky", "02a-OOP_reseni-030-CD-Disky\02a-OOP_reseni-030-CD-Disky.csproj", "{6558BD84-DDB9-4BE4-9608-B73AD5000214}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-OOP-040-Nakupni-seznam", "02a-OOP_reseni-040-Nakupni-seznam\11-OOP-040-Nakupni-seznam.csproj", "{827BB8FA-CB59-49D5-8D17-46C2234C9D4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-040-Nakupni-seznam", "02a-OOP_reseni-040-Nakupni-seznam\02a-OOP_reseni-040-Nakupni-seznam.csproj", "{827BB8FA-CB59-49D5-8D17-46C2234C9D4C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-OOP-050-Prebirani-pole", "02a-OOP_reseni-050-Prebirani-pole\11-OOP-050-Prebirani-pole.csproj", "{1D77772B-170A-4AA8-9E36-0384AB94D40B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-050-Prebirani-pole", "02a-OOP_reseni-050-Prebirani-pole\02a-OOP_reseni-050-Prebirani-pole.csproj", "{1D77772B-170A-4AA8-9E36-0384AB94D40B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-OOP-060-Pes-II", "02a-OOP_reseni-060-Pes-II\11-OOP-060-Pes-II.csproj", "{142E903C-BA34-4EBD-8174-678EA387DAC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-060-Pes-II", "02a-OOP_reseni-060-Pes-II\02a-OOP_reseni-060-Pes-II.csproj", "{142E903C-BA34-4EBD-8174-678EA387DAC1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-OOP-070-Tabulka-cokolady", "02a-OOP_reseni-070-Tabulka-cokolady\11-OOP-070-Tabulka-cokolady.csproj", "{1F723873-F271-40AA-B020-76D46C912097}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-070-Tabulka-cokolady", "02a-OOP_reseni-070-Tabulka-cokolady\02a-OOP_reseni-070-Tabulka-cokolady.csproj", "{1F723873-F271-40AA-B020-76D46C912097}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-OOP-080-Obdelnik-II", "02a-OOP_reseni-080-Obdelnik-II\11-OOP-080-Obdelnik-II.csproj", "{5E33B7CD-D341-480A-93BB-5693CA997667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-080-Obdelnik-II", "02a-OOP_reseni-080-Obdelnik-II\02a-OOP_reseni-080-Obdelnik-II.csproj", "{5E33B7CD-D341-480A-93BB-5693CA997667}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-OOP-090-Obdelnik-III", "02a-OOP_reseni-090-Obdelnik-III\11-OOP-090-Obdelnik-III.csproj", "{CE0512EC-903A-4A7F-BE68-04706A671102}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-090-Obdelnik-III", "02a-OOP_reseni-090-Obdelnik-III\02a-OOP_reseni-090-Obdelnik-III.csproj", "{CE0512EC-903A-4A7F-BE68-04706A671102}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-OOP-06-Ucet", "02-OOP-06-Ucet\02-OOP-06-Ucet.csproj", "{7D10B6EA-1A8C-4BCB-AFF7-9AF44ECE098D}"
 EndProject
@@ -49,13 +49,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-OOP-07-Bod", "02-OOP-07-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-OOP-08-Geometrie", "02-OOP-08-Geometrie\02-OOP-08-Geometrie.csproj", "{5B8B71AF-DF21-4D56-A516-BFB588DD4D17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XX-file-read-write-demo", "XX-file-read-write-demo\XX-file-read-write-demo.csproj", "{A39FE4D8-D774-414D-8693-5F9322BD537F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XX-file-read-write-demo", "XX-file-read-write-demo\XX-file-read-write-demo.csproj", "{A39FE4D8-D774-414D-8693-5F9322BD537F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-WPF-basics", "03-WPF-basics", "{53BC446D-A6E9-4ACC-A037-635DD4DAF35A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-WPF-01-Hello-world", "03-WPF-01-Hello-world\03-WPF-01-Hello-world.csproj", "{CD5946D1-0A06-42AD-83E0-46426EB85490}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-WPF-01-Hello-world", "03-WPF-01-Hello-world\03-WPF-01-Hello-world.csproj", "{CD5946D1-0A06-42AD-83E0-46426EB85490}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-WPF-02-Text-copy", "03-WPF-02-Text-copy\03-WPF-02-Text-copy.csproj", "{D5DFC769-6E38-4336-B2B8-5F14D5A996E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-WPF-02-Text-copy", "03-WPF-02-Text-copy\03-WPF-02-Text-copy.csproj", "{D5DFC769-6E38-4336-B2B8-5F14D5A996E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-100-Pes-III", "C:\Users\koupja\source\repos\2021_PR2_2As2\02a-OOP_reseni-100-Pes-III\02a-OOP_reseni-100-Pes-III.csproj", "{5C0AE734-EA29-4DAD-8866-7ED02A8EF92A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-110-Tabulka-cokolady-II", "C:\Users\koupja\source\repos\2021_PR2_2As2\02a-OOP_reseni-110-Tabulka-cokolady-III\02a-OOP_reseni-110-Tabulka-cokolady-II.csproj", "{D0C82453-61B2-4ED1-B0B3-BC5BDDB6536C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02a-OOP_reseni-120-Kbeliky", "C:\Users\koupja\source\repos\2021_PR2_2As2\02a-OOP_reseni-120-Kbeliky\02a-OOP_reseni-120-Kbeliky.csproj", "{D43B09AF-B412-4230-8720-E5D0949794EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -155,6 +161,18 @@ Global
 		{D5DFC769-6E38-4336-B2B8-5F14D5A996E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5DFC769-6E38-4336-B2B8-5F14D5A996E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5DFC769-6E38-4336-B2B8-5F14D5A996E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0AE734-EA29-4DAD-8866-7ED02A8EF92A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0AE734-EA29-4DAD-8866-7ED02A8EF92A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0AE734-EA29-4DAD-8866-7ED02A8EF92A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0AE734-EA29-4DAD-8866-7ED02A8EF92A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0C82453-61B2-4ED1-B0B3-BC5BDDB6536C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C82453-61B2-4ED1-B0B3-BC5BDDB6536C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C82453-61B2-4ED1-B0B3-BC5BDDB6536C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C82453-61B2-4ED1-B0B3-BC5BDDB6536C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D43B09AF-B412-4230-8720-E5D0949794EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D43B09AF-B412-4230-8720-E5D0949794EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D43B09AF-B412-4230-8720-E5D0949794EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D43B09AF-B412-4230-8720-E5D0949794EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,6 +200,9 @@ Global
 		{5B8B71AF-DF21-4D56-A516-BFB588DD4D17} = {2018ED7B-63DA-442A-94EC-5B9D56B2100B}
 		{CD5946D1-0A06-42AD-83E0-46426EB85490} = {53BC446D-A6E9-4ACC-A037-635DD4DAF35A}
 		{D5DFC769-6E38-4336-B2B8-5F14D5A996E1} = {53BC446D-A6E9-4ACC-A037-635DD4DAF35A}
+		{5C0AE734-EA29-4DAD-8866-7ED02A8EF92A} = {672241D6-9FB7-415E-B580-93DDC9E971DE}
+		{D0C82453-61B2-4ED1-B0B3-BC5BDDB6536C} = {672241D6-9FB7-415E-B580-93DDC9E971DE}
+		{D43B09AF-B412-4230-8720-E5D0949794EA} = {672241D6-9FB7-415E-B580-93DDC9E971DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB031FC3-9FE8-4FD6-B836-C5C1B6CC76F7}
