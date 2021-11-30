@@ -1,0 +1,15 @@
+﻿<Window x:Class="_03_WPF_02_Text_copy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03_WPF_02_Text_copy"
+        mc:Ignorable="d"
+        Title="Text copy" Height="194" Width="320">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Margin="70,50,0,0" Text="Vlož text" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="InputTB"/>
+        <TextBox HorizontalAlignment="Left" Margin="70,73,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="OutputTB" IsEnabled="False"/>
+        <Button Content="Klikni" HorizontalAlignment="Left" Margin="195,50,0,0" VerticalAlignment="Top" Height="41" Click="Button_Click" IsDefault="True"/>
+
+    </Grid>
+</Window>
