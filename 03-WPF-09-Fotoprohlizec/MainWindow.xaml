@@ -1,0 +1,36 @@
+﻿<Window x:Class="_03_WPF_09_Fotoprohlizec.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03_WPF_09_Fotoprohlizec"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="70"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="LoadBtn"
+                Content="Load"
+                Grid.Row="1"
+                Grid.Column="1" Click="LoadBtn_Click"                
+                />
+
+        <Label x:Name="FilenameLbl"
+               Grid.Row="1"
+               Grid.Column="0"
+               />
+
+        <Image x:Name="PhotoImg"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               />
+    </Grid>
+</Window>
