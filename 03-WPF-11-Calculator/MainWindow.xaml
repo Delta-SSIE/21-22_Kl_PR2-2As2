@@ -7,11 +7,15 @@
         mc:Ignorable="d"
         Title="Dead simple calculator" Height="450" Width="300">
     <Window.Resources>
+        <Thickness x:Key="MarginThickness">0</Thickness>
+        <SolidColorBrush x:Key="ButtonForeground">White</SolidColorBrush>
+        
         <Style x:Key="BaseButton"
                TargetType="Button">
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="Background" Value="Black"/>
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="{StaticResource ButtonForeground}"/>
+            <Setter Property="Margin" Value="{StaticResource MarginThickness}" />
         </Style>
         <Style x:Key="NumberBtn"
                TargetType="Button"
@@ -24,7 +28,7 @@
             <Setter Property="Background" Value="Red"/>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid Margin="{StaticResource MarginThickness}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -49,6 +53,7 @@
                  HorizontalContentAlignment="Right"
                  VerticalContentAlignment="Center"
                  FontSize="62"
+                 Margin="{StaticResource MarginThickness}"
                  />
 
         <Button x:Name="ACBtn"
@@ -85,6 +90,7 @@
                 Grid.Row="2"
                 Grid.Column="0"
                 Content="7"
+                Click="NumberBtn_Click"
                 />
         
         <Button x:Name="EightBtn"
@@ -92,6 +98,7 @@
                 Grid.Row="2"
                 Grid.Column="1"
                 Content="8"
+                Click="NumberBtn_Click"
                 />
         
         <Button x:Name="NineBtn"
@@ -99,6 +106,7 @@
                 Grid.Row="2"
                 Grid.Column="2"
                 Content="9"
+                Click="NumberBtn_Click"
                 />
 
         <Button x:Name="MultiplicationBtn"
@@ -113,6 +121,7 @@
                 Grid.Row="3"
                 Grid.Column="0"
                 Content="4"
+                Click="NumberBtn_Click"
                 />
 
         <Button x:Name="FiveBtn"
@@ -120,6 +129,7 @@
                 Grid.Row="3"
                 Grid.Column="1"
                 Content="5"
+                Click="NumberBtn_Click"
                 />
 
         <Button x:Name="SixBtn"
@@ -127,6 +137,7 @@
                 Grid.Row="3"
                 Grid.Column="2"
                 Content="6"
+                Click="NumberBtn_Click"
                 />
 
         <Button x:Name="SubtractionBtn"
@@ -141,6 +152,7 @@
                 Grid.Row="4"
                 Grid.Column="0"
                 Content="1"
+                Click="NumberBtn_Click"
                 />
 
         <Button x:Name="TwoBtn"
@@ -148,6 +160,7 @@
                 Grid.Row="4"
                 Grid.Column="1"
                 Content="2"
+                Click="NumberBtn_Click"
                 />
 
         <Button x:Name="ThreeBtn"
@@ -155,6 +168,7 @@
                 Grid.Row="4"
                 Grid.Column="2"
                 Content="3"
+                Click="NumberBtn_Click"
                 />
 
         <Button x:Name="AdditionBtn"
@@ -169,6 +183,7 @@
                 Grid.Row="5"
                 Grid.Column="0"
                 Content="0"
+                Click="NumberBtn_Click"
                 />
 
         <Button x:Name="DecimalBtn"
