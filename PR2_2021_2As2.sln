@@ -79,6 +79,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-WPF-09-Fotoprohlizec", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-WPF-10-Radio-a-disabled", "03-WPF-10-Radio-a-disabled\03-WPF-10-Radio-a-disabled.csproj", "{BF87F4F4-C69B-45C5-9126-DDE94B671F78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-WPF-11-Calculator", "03-WPF-11-Calculator\03-WPF-11-Calculator.csproj", "{073D4195-57E5-477B-A0DB-A95D45579B2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -221,6 +223,10 @@ Global
 		{BF87F4F4-C69B-45C5-9126-DDE94B671F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF87F4F4-C69B-45C5-9126-DDE94B671F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF87F4F4-C69B-45C5-9126-DDE94B671F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{073D4195-57E5-477B-A0DB-A95D45579B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{073D4195-57E5-477B-A0DB-A95D45579B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{073D4195-57E5-477B-A0DB-A95D45579B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{073D4195-57E5-477B-A0DB-A95D45579B2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -259,6 +265,7 @@ Global
 		{F18912CE-D74B-48A6-BD7A-C8CBE45FB3AF} = {53BC446D-A6E9-4ACC-A037-635DD4DAF35A}
 		{931EB644-B4E4-4B49-841E-AA60575E7617} = {53BC446D-A6E9-4ACC-A037-635DD4DAF35A}
 		{BF87F4F4-C69B-45C5-9126-DDE94B671F78} = {53BC446D-A6E9-4ACC-A037-635DD4DAF35A}
+		{073D4195-57E5-477B-A0DB-A95D45579B2B} = {53BC446D-A6E9-4ACC-A037-635DD4DAF35A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB031FC3-9FE8-4FD6-B836-C5C1B6CC76F7}
