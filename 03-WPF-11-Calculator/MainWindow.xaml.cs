@@ -23,7 +23,21 @@ namespace _03_WPF_11_Calculator
         //proměnné: 
 
         //aktuální číslo
-        private string currentText = "0";
+        //private string currentText = "0";
+
+
+        public string currentText
+        {
+            get { return (string)GetValue(currentTextProperty); }
+            set { SetValue(currentTextProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for currentText.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty currentTextProperty =
+            DependencyProperty.Register("currentText", typeof(string), typeof(MainWindow), new PropertyMetadata("0"));
+
+
+
         //minulé číslo
         private double lastValue = 0;
         //zapamatovaná operace
@@ -35,7 +49,7 @@ namespace _03_WPF_11_Calculator
         }
 
         private void NumberBtn_Click(object sender, RoutedEventArgs e)
-        {            
+        {          
             Button clickedBtn = (Button)sender; //pracuj s proměnnou sender jako by to byl button
             
             //vezmi aktuální text v tlačítku
@@ -53,7 +67,100 @@ namespace _03_WPF_11_Calculator
 
         private void Render()
         {
-            Display.Text = currentText;
+            //Display.Text = currentText;
+        }
+
+        private void DecimalBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string decimalSeparator = System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+
+            if (currentText.Contains(decimalSeparator))
+            {
+                return;
+            }
+
+            currentText += decimalSeparator;
+            Render();
+        }
+
+        private void ACBtn_Click(object sender, RoutedEventArgs e)
+        {
+            currentText = "0";
+            Render();
+        }
+
+        private void PlusMinusBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentText == "0")
+                return;
+
+            //currentText = Convert.ToString(double.Parse(currentText) * -1);
+
+            if (currentText[0] == '-')
+            {
+                currentText = currentText.Substring(1);
+            }
+            else
+            {
+                currentText = "-" + currentText;
+            }
+
+            Render();
+        }
+
+        private void PercentBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double currentValue = double.Parse(currentText);
+            double percentValue = SimpleMath.Percent(currentValue);
+            currentText = Convert.ToString(percentValue);
+            Render();
+        }
+
+        private void OperationBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (sender == AdditionBtn)
+                operation = SimpleMath.Operation.Addition;
+            else if (sender == SubtractionBtn)
+                operation = SimpleMath.Operation.Subtraction;
+            else if (sender == MultiplicationBtn)
+                operation = SimpleMath.Operation.Multiplication;
+            else if (sender == DivisionBtn)
+                operation = SimpleMath.Operation.Division;
+
+            lastValue = double.Parse(currentText);
+
+            currentText = "0";
+            Render();
+        }
+
+        private void EqualsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double currentValue = double.Parse(currentText);
+
+            double result;
+
+            switch (operation)
+            {
+                case SimpleMath.Operation.Addition:
+                    result = SimpleMath.Addition(lastValue, currentValue);
+                    break;
+                case SimpleMath.Operation.Subtraction:
+                    result = SimpleMath.Subtraction(lastValue, currentValue);
+                    break;
+                case SimpleMath.Operation.Multiplication:
+                    result = SimpleMath.Multiplication(lastValue, currentValue);
+                    break;
+                case SimpleMath.Operation.Division:
+                    result = SimpleMath.Division(lastValue, currentValue);
+                    break;
+                default:
+                    result = 0; //impossible case
+                    break;
+            }
+
+            currentText = Convert.ToString(result);
+            Render();
         }
     }
 }

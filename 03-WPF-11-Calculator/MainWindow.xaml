@@ -5,27 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_03_WPF_11_Calculator"
         mc:Ignorable="d"
-        Title="Dead simple calculator" Height="450" Width="300">
+        Title="Dead simple calculator" Height="450" Width="300"
+        x:Name="CalcWindow">
     <Window.Resources>
         <Thickness x:Key="MarginThickness">0</Thickness>
         <SolidColorBrush x:Key="ButtonForeground">White</SolidColorBrush>
+        <SolidColorBrush x:Key="BaseButtonBackground">Black</SolidColorBrush>
+        <SolidColorBrush x:Key="NumberButtonBackground">Green</SolidColorBrush>
+        <SolidColorBrush x:Key="SpecialButtonBackground">Red</SolidColorBrush>
         
         <Style x:Key="BaseButton"
                TargetType="Button">
             <Setter Property="FontSize" Value="20"/>
-            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Background" Value="{StaticResource BaseButtonBackground}"/>
             <Setter Property="Foreground" Value="{StaticResource ButtonForeground}"/>
             <Setter Property="Margin" Value="{StaticResource MarginThickness}" />
         </Style>
         <Style x:Key="NumberBtn"
                TargetType="Button"
                BasedOn="{StaticResource BaseButton}">
-            <Setter Property="Background" Value="DarkGreen"/>
+            <Setter Property="Background" Value="{StaticResource NumberButtonBackground}"/>
         </Style>
         <Style x:Key="SpecialBtn"
                TargetType="Button"
                BasedOn="{StaticResource BaseButton}">
-            <Setter Property="Background" Value="Red"/>
+            <Setter Property="Background" Value="{StaticResource SpecialButtonBackground}"/>
         </Style>
     </Window.Resources>
     <Grid Margin="{StaticResource MarginThickness}">
@@ -48,7 +52,7 @@
                  Grid.Row="0"
                  Grid.Column="0"
                  Grid.ColumnSpan="4"
-                 Text="0"
+                 Text="{Binding ElementName=CalcWindow,Path=currentText}"
                  IsEnabled="False"
                  HorizontalContentAlignment="Right"
                  VerticalContentAlignment="Center"
@@ -61,20 +65,23 @@
                 Grid.Row="1"
                 Grid.Column="0"
                 Content="AC"
+                Click="ACBtn_Click"
                 />
         
         <Button x:Name="PlusMinusBtn"
                 Style="{StaticResource BaseButton}"
                 Grid.Row="1"
                 Grid.Column="1"
-                Content="+/-"
+                Content="+/-" 
+                Click="PlusMinusBtn_Click"
                 />
 
         <Button x:Name="PercentBtn"
                 Style="{StaticResource BaseButton}"
                 Grid.Row="1"
                 Grid.Column="2"
-                Content="%"
+                Content="%" 
+                Click="PercentBtn_Click"
                 />
 
 
@@ -83,6 +90,7 @@
                 Grid.Row="1"
                 Grid.Column="3"
                 Content="/"
+                Click="OperationBtn_Click"
                 />
 
         <Button x:Name="SevenBtn"
@@ -114,6 +122,7 @@
                 Grid.Row="2"
                 Grid.Column="3"
                 Content="*"
+                Click="OperationBtn_Click"
                 />
 
         <Button x:Name="FourBtn"
@@ -145,6 +154,7 @@
                 Grid.Row="3"
                 Grid.Column="3"
                 Content="-"
+                Click="OperationBtn_Click"
                 />
 
         <Button x:Name="OneBtn"
@@ -175,7 +185,8 @@
                 Style="{StaticResource BaseButton}"
                 Grid.Row="4"
                 Grid.Column="3"
-                Content="+"
+                Content="+" 
+                Click="OperationBtn_Click"
                 />
 
         <Button x:Name="ZeroBtn"
@@ -191,6 +202,7 @@
                 Grid.Row="5"
                 Grid.Column="1"
                 Content="."
+                Click="DecimalBtn_Click"
                 />
         
         <Button x:Name="EqualsBtn"
@@ -198,7 +210,7 @@
                 Grid.Row="5"
                 Grid.Column="2"
                 Grid.ColumnSpan="2"
-                Content="="
+                Content="=" Click="EqualsBtn_Click"
                 />        
     </Grid>
 </Window>
