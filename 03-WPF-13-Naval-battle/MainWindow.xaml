@@ -6,6 +6,21 @@
         xmlns:local="clr-namespace:_03_WPF_13_Naval_battle"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="EmptyTile" TargetType="Rectangle">
+            <Setter Property="Fill" Value="LightSeaGreen"/>
+            <Setter Property="Stroke" Value="Black"/>
+        </Style>
+        <Style x:Key="ShipTile" TargetType="Rectangle" BasedOn="{StaticResource EmptyTile}">
+            <Setter Property="Fill" Value="DarkMagenta"/>
+        </Style>
+        <Style x:Key="WreckTile" TargetType="Rectangle" BasedOn="{StaticResource EmptyTile}">
+            <Setter Property="Fill" Value="Firebrick"/>
+        </Style>
+        <Style x:Key="MissedTile" TargetType="Rectangle" BasedOn="{StaticResource EmptyTile}">
+            <Setter Property="Fill" Value="SeaGreen"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -31,7 +46,7 @@
                VerticalContentAlignment="Center"
                />
 
-        <Grid x:Name="PlayerSeaDisplay" Grid.Column="0" Grid.Row="1"/>
-        <Grid x:Name="ComputerSeaDisplay" Grid.Column="1" Grid.Row="1"/>
+        <Grid x:Name="PlayerSeaDisplay" Grid.Column="0" Grid.Row="1" Margin="10"/>
+        <Grid x:Name="ComputerSeaDisplay" Grid.Column="1" Grid.Row="1" Margin="10"/>
     </Grid>
 </Window>

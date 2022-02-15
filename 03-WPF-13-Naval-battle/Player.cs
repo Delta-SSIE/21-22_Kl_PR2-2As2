@@ -23,6 +23,15 @@ namespace _03_WPF_13_Naval_battle
 
         public Player(int shipCount, int seaSize)
         {
+            if (shipCount < 1)
+                throw new ArgumentException();
+
+            if (seaSize < 2)
+                throw new ArgumentException();
+
+            if (shipCount >= seaSize * seaSize)
+                throw new ArgumentException("Too many ships");
+
             _shipCount = shipCount;
             _seaSize = seaSize;
 
@@ -31,11 +40,25 @@ namespace _03_WPF_13_Naval_battle
         }
         private void CreateSea()
         {
-            throw new NotImplementedException();
+            _sea = new TileState[_seaSize, _seaSize];
         }
         private void PlaceShips()
         {
-            throw new NotImplementedException();
+            Random rnd = new Random();
+
+            int placed = 0; //counter for already placed ships
+
+            do
+            {
+                int x = rnd.Next(_seaSize);
+                int y = rnd.Next(_seaSize);
+                if (_sea[x,y] != TileState.Ship)
+                {
+                    _sea[x, y] = TileState.Ship;
+                    placed++;
+                }
+            }
+            while (placed < _shipCount);
         }
         public Coordinates ChooseTarget(TileState[,] opponentMap)
         {
@@ -80,7 +103,7 @@ namespace _03_WPF_13_Naval_battle
                     //else
                     //    publicSea[x, y] = _sea[x, y];
 
-                    publicSea[x, y] = (_sea[x, y] == TileState.Ship) ? TileState.Empty : _sea[x, y];
+                    publicSea[x, y] = _sea[x, y] == TileState.Ship ? TileState.Empty : _sea[x, y];
                 }
             }
             return publicSea;
