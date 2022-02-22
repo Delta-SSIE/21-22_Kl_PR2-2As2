@@ -62,7 +62,20 @@ namespace _03_WPF_13_Naval_battle
         }
         public Coordinates ChooseTarget(TileState[,] opponentMap)
         {
-            throw new NotImplementedException();
+            Random rnd = new Random();
+
+            Coordinates target = null;
+
+            do
+            {
+                int x = rnd.Next(_seaSize);
+                int y = rnd.Next(_seaSize);
+                if (opponentMap[x, y] == TileState.Empty)
+                    target = new Coordinates() { X = x, Y = y };
+            }
+            while (target == null);
+
+            return target;
         }
         /// <summary>
         /// Looks into map, modifies at place of target - notes down hit/missed

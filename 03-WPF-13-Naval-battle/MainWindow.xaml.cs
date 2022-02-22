@@ -101,10 +101,7 @@ namespace _03_WPF_13_Naval_battle
                 Close();
             }
 
-            // počítač vymyslí, kma střílet
-            // vyhodnoť zásah
-            // když hráč už nemá lodi
-            //ohlas prohru a skonči
+            ComputerMove();
         }
 
         private void RenderTile(Rectangle tile, TileState state)
@@ -131,6 +128,48 @@ namespace _03_WPF_13_Naval_battle
         private void RenderShipsDisplay(Label display, int wrecks)
         {
             display.Content = $"{wrecks} / {_shipCount}";
+        }
+
+        private void ComputerMove()
+        {
+            // počítač vymyslí, kam střílet
+            Coordinates target = _computer.ChooseTarget(_player.GetPublicSea());
+            
+            // vyhodnoť zásah
+            _player.HandleShot(target);
+
+            // překresli políčko se zásahem
+            Rectangle targetTile = FindTileByCoordinates(PlayerSeaDisplay, target);
+            RenderTile(targetTile, _player.GetPublicSea()[target.X, target.Y]);
+            RenderShipsDisplay(ComputerShipsDisplay, _computer.WreckCount);
+
+            // když hráč už nemá lodi
+            if (!_player.IsAlive)
+            {
+                //ohlas prohru a skonči
+                MessageBox.Show("Defeat", "You Lose!");
+                Close();
+            }
+
+        }
+
+        private Rectangle FindTileByCoordinates(Grid grid, Coordinates coordinates)
+        {
+            //projdi všechny elementy v gridu
+            foreach (var child in grid.Children) 
+            {
+                Rectangle tile = (Rectangle)child; //můžu, v gridu není nic než rectangle, sám jsem si je tam dal
+
+                //zeptej se na souřadnice
+                int x = Grid.GetColumn(tile);
+                int y = Grid.GetRow(tile);
+                
+                //když odpovídají, vrať
+                if (x == coordinates.X && y == coordinates.Y)
+                    return tile;
+            }
+
+            return null;
         }
     }
 }
