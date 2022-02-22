@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace _03_WPF_13_Naval_battle
 {
@@ -22,17 +23,25 @@ namespace _03_WPF_13_Naval_battle
     {
         private const int _shipCount = 5;
         private const int _seaSize = 3;
+        private const int _shotWait = 750; //milliseconds delay
 
         private Player _player;
         private Player _computer;
+        private DispatcherTimer _shotTimer;
+
+        private bool _canShoot;
 
         public MainWindow()
         {
             InitializeComponent();
+            _shotTimer = new DispatcherTimer();
+            _shotTimer.Interval = TimeSpan.FromMilliseconds(_shotWait);
+            _shotTimer.Tick += _shotTimer_Tick;
 
             //vytvořit oba hráče
             _player = new Player(_shipCount, _seaSize);
             _computer = new Player(_shipCount, _seaSize);
+            _canShoot = true;
 
             // vytvořit oba displeje
             InitializeDisplay(PlayerSeaDisplay, _player.GetPrivateSea());
@@ -43,8 +52,6 @@ namespace _03_WPF_13_Naval_battle
             RenderShipsDisplay(ComputerShipsDisplay, _computer.WreckCount);
 
         }
-
-
 
         private void InitializeDisplay(Grid display, TileState[,] sea, bool isClickable = false)
         {
@@ -79,6 +86,9 @@ namespace _03_WPF_13_Naval_battle
 
         private void Tile_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            if (!_canShoot) //kliká, ale není na tahu
+                return;
+
             //když hráč klikne
             Rectangle targetTile = (Rectangle)sender;
 
@@ -87,7 +97,7 @@ namespace _03_WPF_13_Naval_battle
             Coordinates target = new Coordinates() { X = x, Y = y };
 
             // vyhodnoť zásah
-            _computer.HandleShot(target);
+            bool hit = _computer.HandleShot(target);
 
             //překreslit
             RenderTile(targetTile, _computer.GetPublicSea()[x, y]);
@@ -101,7 +111,11 @@ namespace _03_WPF_13_Naval_battle
                 Close();
             }
 
-            ComputerMove();
+            if (!hit)
+            { 
+                _shotTimer.Start();
+                _canShoot = false;
+            }
         }
 
         private void RenderTile(Rectangle tile, TileState state)
@@ -129,14 +143,19 @@ namespace _03_WPF_13_Naval_battle
         {
             display.Content = $"{wrecks} / {_shipCount}";
         }
-
+        private void _shotTimer_Tick(object sender, EventArgs e)
+        {
+            _shotTimer.Stop();
+            ComputerMove();
+        }
         private void ComputerMove()
         {
+
             // počítač vymyslí, kam střílet
             Coordinates target = _computer.ChooseTarget(_player.GetPublicSea());
-            
+
             // vyhodnoť zásah
-            _player.HandleShot(target);
+            bool hit = _player.HandleShot(target);
 
             // překresli políčko se zásahem
             Rectangle targetTile = FindTileByCoordinates(PlayerSeaDisplay, target);
@@ -149,6 +168,16 @@ namespace _03_WPF_13_Naval_battle
                 //ohlas prohru a skonči
                 MessageBox.Show("Defeat", "You Lose!");
                 Close();
+            }
+
+            // pokud se PC trefil, bude střílet zase 
+            if (hit)
+            { 
+                _shotTimer.Start();
+            }
+            else
+            {
+                _canShoot = true; //netrefa - dovol hrát hráči
             }
 
         }
